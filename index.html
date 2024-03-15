@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SURVEY FORM</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container"> <!--For side gap we do with container -->
+    <h1 id="title">kindly fill the form</h1> <!--Creating the form-->
+    <p id ="description">Kindly give your details </p>
+    <form id="survey-form" class="survey-form" onsubmit= "return false">
+    
+      <!--GETTING NAME -->
+        <div class="form-group col-md-6">
+          <label for="firstName" id="name-label">First Name & Last Name</label>
+          <input type="text" class="form-control" id="first-name" name="first-name" placeholder="firstName"required>
+          <input type="text" class="form-control" id="last-name" name="last-name" placeholder="lastName"required>
+        </div>
+     
+
+    <!--Email-->
+    <div class="form-group">
+      <label for="email" id="email-label">Email </label>
+      <input type="email" class="form-control"  id="email" name="email" placeholder="name@example.com" required>
+    </div>
+
+
+      <!--ADDRESS-->
+      <div class="form-group">
+        <label for="Address"id="address-label">Address</label>
+        <input type="text" class="form-control" id="Address" name="Address" placeholder="1234 Main St" required>
+      </div>
+ 
+     <!--PIN CODE-->
+     <div class="form-group">
+      <label for="pincode" id="number-label">Pin Code</label>
+      <input type="number" class="form-control" id="pinCode" name="pinCode" placeholder="pincode" required>
+      </div>
+
+    <!--Gender-->
+    <label class="my-1 mr-2" for="gender" id="gender-label">Gender</label>
+    <select class="custom-select my-1 mr-sm-2" id="gender" name="gender" value="male" >
+    <option selected>Choose...</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Others">Other</option>
+    </select>
+
+    <!--Food Select-->
+    
+    <label for="food" id="food-label">Choose minimum 2 dishes please</label><br>
+    <fieldset name="foodChoice" class="mb-3" id="foodChoice1">
+      <label for="dish" class="form-label">Dish</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="food1" id="food1"  value="Pizza">
+        <label class="form-check-label" for="food1" id="food1-label">Pizza</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="food1" id="food2" value="Idly">
+        <label class="form-check-label" for="food2" id="food2-label">Idly</label>
+      </div>
+    </fieldset>
+ 
+    <fieldset name="foodChoice" class="mb-3" id="foodChoice2">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="food" id="food3" value="Vadai">
+        <label class="form-check-label" for="food3" id="food3-label">Vadai</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="food" id="food4" value="burger">
+        <label class="form-check-label" for="food4" id="food4-label">Burger</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="food" id="food5"  value="Sambhar">
+        <label class="form-check-label" for="food5" id="food5-label">Sambhar</label>
+      </div>
+    </fieldset>
+
+  
+
+      <!--STATE-->
+  
+    <div class="form-group ">
+      <label for= "state" id="state-label">STATE</label>
+      <input type="text" class="form-control" name="state" id="state" required>
+    </div>
+
+    <div class="form-group">
+      <label for= "country"  id="country-label">COUNTRY</label>
+      <input type="text" class="form-control" name="country" id="country" required>
+    </div>
+  
+    <br/>
+    
+    <!--COMMENTS-->
+    <div class="form-group">
+          <label for="comments" id="comments-label" >Comments</label>
+          <textarea class="form-control" id= "comments"name="comments "id="commentsof" rows="3"></textarea>
+    </div>
+      
+      <!--SUBMIT -->
+    <button type="submit" id="submit" name="submit" class="btn btn-primary" onclick ="submitForm()">Submit</button>
+    </form>
+    
+    <h1>Table</h1>
+    <table id="dataTable" class ="table" > <!--Creating table -->
+      <thead> <!--To group header content in an HTML table-->
+        <tr> <!--Table Row-->
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Pin Code</th>
+          <th>Gender</th>
+          <th>Food1</th>
+          <th>Food2</th>
+          <th>State</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--Table body-->
+      </tbody>
+    </table>
+
+  </div>
+  <script src="./script.js"></script>
+ <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script> <!--Guvi test-->
+</body>
+</html>
